@@ -1,3 +1,4 @@
+
 // ============================================
 // Bubu Dudu Valentine's Day Website JavaScript
 // ============================================
@@ -31,54 +32,6 @@ document.addEventListener('DOMContentLoaded', () => {
         bgMusic.volume = 0.5;
         bgMusic.play().catch(e => console.log('Audio play failed:', e));
     });
-
-    // ============================================
-    // Floating Hearts Generator
-    // ============================================
-    const heartEmojis = ['💕', '💖', '💗', '💓', '💝', '💘', '❤️', '🌸', '✨', '💐', '🌹'];
-
-    // Add multiple images here
-    const girlImages = ["girl1.png", "girl2.png", "girl3.png", "girl4.png"];
-
-    function createHeart() {
-        const heart = document.createElement('div');
-        heart.className = 'heart';
-
-        const size = Math.random() * 20 + 20; // 20px to 40px
-
-        // 75% chance image, 25% chance emoji
-        if (Math.random() < 0.75) {
-            const img = document.createElement("img");
-            img.src = girlImages[Math.floor(Math.random() * girlImages.length)];
-
-            img.style.width = size + "px";
-            img.style.height = size + "px";
-            img.style.borderRadius = "50%"; // optional (circle)
-            img.style.objectFit = "cover";
-            img.style.objectPosition = "center top";
-
-            heart.appendChild(img);
-        } else {
-            heart.textContent = heartEmojis[Math.floor(Math.random() * heartEmojis.length)];
-            heart.style.fontSize = size + "px";
-        }
-
-        heart.style.left = Math.random() * 100 + "vw";
-        heart.style.animationDuration = (Math.random() * 5 + 5) + "s";
-        heart.style.animationDelay = Math.random() * 2 + "s";
-
-        heartsContainer.appendChild(heart);
-
-        setTimeout(() => {
-            heart.remove();
-        }, 12500);
-    }
-
-    setInterval(createHeart, 600);
-
-    for (let i = 0; i < 12; i++) {
-        setTimeout(createHeart, i * 200);
-    }
 
     // ============================================
     // No Button - Moves away when clicked
@@ -116,14 +69,6 @@ document.addEventListener('DOMContentLoaded', () => {
         noBtn.style.zIndex = "9999";
         noBtn.style.transition = "left 0.2s ease, top 0.2s ease";
     }
-
-    // PC click
-    noBtn.addEventListener("click", (e) => {
-        e.preventDefault();
-        e.stopPropagation();
-        moveNoButtonRandomly();
-    });
-
     // Mobile touch
     noBtn.addEventListener("touchstart", (e) => {
         e.preventDefault();
@@ -369,3 +314,4 @@ document.addEventListener('DOMContentLoaded', () => {
     document.head.appendChild(style);
 
 });
+
