@@ -27,24 +27,6 @@
     box-sizing: border-box;
 }
 
-/* Custom Bubu Cursor - Accurate Bubu face: white/cream face, dark brown ears, black eyes, pink cheeks, brown mouth */
-body {
-    font-family: 'Quicksand', sans-serif;
-    min-height: 100vh;
-    overflow: hidden;
-    /* Dark pink gradient background */
-    background: linear-gradient(135deg, 
-        #880E4F 0%, 
-        #AD1457 25%, 
-        #C2185B 50%, 
-        #AD1457 75%, 
-        #880E4F 100%);
-    background-size: 400% 400%;
-    animation: gradientShift 15s ease infinite;
-    /* Bubu cursor - white/cream face, dark brown ears, black eyes, pink cheeks */
-    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><circle cx="16" cy="18" r="13" fill="%23FFFEF8" stroke="%23E8E0D8" stroke-width="0.5"/><circle cx="7" cy="7" r="4" fill="%234A3728"/><circle cx="25" cy="7" r="4" fill="%234A3728"/><circle cx="11" cy="15" r="2" fill="%232D2016"/><circle cx="21" cy="15" r="2" fill="%232D2016"/><path d="M 14 20 Q 16 18 18 20" stroke="%234A3728" stroke-width="1.5" fill="none" stroke-linecap="round"/><path d="M 16 20 L 16 22" stroke="%234A3728" stroke-width="1" fill="none"/><ellipse cx="16" cy="24" rx="2.5" ry="1.5" fill="%23E8A0A0"/><circle cx="6" cy="20" r="3" fill="%23F5B5B5" opacity="0.8"/><circle cx="26" cy="20" r="3" fill="%23F5B5B5" opacity="0.8"/><circle cx="1" cy="1" r="1.5" fill="%23FF69B4"/></svg>') 1 1, auto;
-}
-
 @keyframes gradientShift {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
@@ -74,6 +56,16 @@ body {
     z-index: 1000;
     cursor: pointer;
 }
+.bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -5;
+}
+
 .start-image {
     width: 230px;
     max-width: 80%;
@@ -144,26 +136,6 @@ body {
     50% { transform: translateY(-15px); }
 }
 
-/* Floating Hearts Background */
-.hearts-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: 1;
-    overflow: hidden;
-}
-
-.heart {
-    position: absolute;
-    font-size: 20px;
-    animation: floatUp 8s ease-in-out infinite;
-    opacity: 0.7;
-    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.3));
-}
-
 @keyframes floatUp {
     0% {
         transform: translateY(100vh) rotate(0deg) scale(0.5);
@@ -178,46 +150,6 @@ body {
     100% {
         transform: translateY(-100px) rotate(360deg) scale(1);
         opacity: 0;
-    }
-}
-
-/* Floating Bubu Dudu GIFs Container */
-.gif-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: 2;
-}
-
-.floating-gif {
-    position: absolute;
-    width: 100px;
-    height: 100px;
-    object-fit: contain;
-    border-radius: 15px;
-    opacity: 0.95;
-    filter: drop-shadow(0 4px 15px rgba(255, 255, 255, 0.4));
-    animation: floatBounce 6s ease-in-out infinite;
-    background: rgba(255, 255, 255, 0.15);
-    padding: 8px;
-}
-
-.gif-1 { top: 3%; left: 3%; animation-delay: 0s; width: 90px; height: 90px; }
-.gif-2 { top: 5%; right: 5%; animation-delay: 1s; width: 100px; height: 100px; }
-.gif-3 { bottom: 20%; left: 2%; animation-delay: 2s; width: 85px; height: 85px; }
-.gif-4 { bottom: 5%; right: 3%; animation-delay: 3s; width: 95px; height: 95px; }
-.gif-5 { top: 45%; left: 1%; animation-delay: 1.5s; width: 80px; height: 80px; }
-.gif-6 { top: 40%; right: 2%; animation-delay: 2.5s; width: 85px; height: 85px; }
-
-@keyframes floatBounce {
-    0%, 100% {
-        transform: translateY(0) scale(1) rotate(-3deg);
-    }
-    50% {
-        transform: translateY(-20px) scale(1.05) rotate(3deg);
     }
 }
 
