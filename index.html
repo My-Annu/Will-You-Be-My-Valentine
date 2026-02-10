@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Be My Valentine?</title>
+
+    <!-- Heart Favicon -->
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M50 88 C20 60, 5 40, 5 25 C5 10, 20 0, 35 0 C45 0, 50 10, 50 10 C50 10, 55 0, 65 0 C80 0, 95 10, 95 25 C95 40, 80 60, 50 88Z' fill='%23FF4D6D'/%3E%3Cpath d='M50 88 C20 60, 5 40, 5 25 C5 10, 20 0, 35 0 C45 0, 50 10, 50 10' fill='%23FF6B8A'/%3E%3Cellipse cx='25' cy='25' rx='8' ry='6' fill='%23FFB6C1' opacity='0.6' transform='rotate(-30 25 25)'/%3E%3C/svg%3E">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Quicksand:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600&display=swap" rel="stylesheet">
+
+
+</head>
+
+<body>
+    <!-- Background Music - Littleroot Town -->
+    <audio id="bgMusic" loop>
+        <source src="1-05. Littleroot Town.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Floating hearts background -->
+    <div class="hearts-container" id="heartsContainer"></div>
+
+    <!-- Floating Bubu Dudu GIFs - Using your actual files -->
+    <div class="gif-container">
+        <img src="bubu-bubu-dudu.gif" alt="Bubu Dudu" class="floating-gif gif-1">
+        <img src="f5e0a5e748b2dc73bdec6ba0aca0a083.gif" alt="Bubu Dudu" class="floating-gif gif-2">
+        <img src="bubu-bubu-dudu (1).gif" alt="Bubu Dudu" class="floating-gif gif-3">
+        <img src="bubu-bubu-dudu (1).gif" alt="Bubu Dudu" class="floating-gif gif-4">
+        <img src="7ebd71142a47c65e890af6471812fa88.gif" alt="Bubu Dudu" class="floating-gif gif-5">
+        <img src="a771b648079541e016d6490ae8a22818.gif" alt="Bubu Dudu" class="floating-gif gif-6">
+    </div>
+
+    <!-- Main Question Page -->
+    <div class="page" id="questionPage">
+        <div class="card">
+            <div class="card-inner">
+                <!-- Main Bubu Dudu Image -->
+                <div class="main-image-container">
+                    <img src="Ring.png" alt="Bubu" class="main-bubu-image">
+                </div>
+                <h1 class="title">Will You Be My Valentine?</h1>
+                <p class="subtitle">Try clicking No if you can🤭🔥</p>
+                <div class="buttons-container">
+                    <button class="btn btn-yes" id="yesBtn">
+                        <span class="btn-text">Yes! 💖</span>
+                        <span class="btn-sparkle">✨</span>
+                    </button>
+                    <button class="btn btn-no" id="noBtn">
+                        <span class="btn-text">No ☹</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Page (shown when Yes is clicked) -->
+    <div class="page hidden" id="successPage">
+        <div class="card success-card">
+            <div class="card-inner">
+                <h1 class="title success-title">Yayyyyyyy! 🎉💕</h1>
+                <p class="subtitle success-subtitle">Mujhe pata tha aap yes bologe🤭! You made me the happiest! 💖</p>
+                <div class="video-container">
+                    <video id="celebrationVideo" controls playsinline>
+                        <source src="Wish.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="celebration-text">
+                    <p>💕Happy Valentine's Day, My Love 💕</p>
+                </div>
+                <!-- Success Bubu Dudu GIF -->
+                <div class="success-gif-container">
+                    <img src="bubu-dudu-kisses.gif" alt="Bubu Dudu Love" class="success-gif">
+                </div>
+                <div class="love-paragraph">
+                    <h2 class="love-heading">💌 A Special Message For My Bubuu 💌</h2>
+                    <div class="warning-box">
+                        ⚠️Warning: A longggg message ahead… grab a smile, and read slowly💌💕
+                    </div>
+                    <p>Happy Valentine’s Day, my love ❤️🌹</p>
+
+                    <p>
+                        Smjh nhi a rha kaha se start kru because jab bhi apke baare sochta hu my heart just gets heavy,
+                        heavy in the sweetest way, heavy with love, heavy with feelings, heavy with kind of attachment
+                        that I never knew that I could have for someone. And honestly sometimes it scares me kyunki aap
+                        sirf mere life ke part nhi ho, you are my life🥺🫂.
+                    </p>
+
+                    <p>
+                        Apko pata hai people celebrate Valentine Day with chocolates, flowers, dates but mere liye
+                        Valentine Day bs ek bahana hai apko ek baar firse yaad dilaye ki I am yours, Fully, Only and
+                        Madly Yours🫵🫵
+                    </p>
+
+                    <p>
+                        Even though abhi hum dur hai🥺, even though I can't hold your hand right now, even though I
+                        can't pull you close and kiss your forehead, still, aise lgta hai jaise my heart lives next to
+                        you. Jaise ki my soul has already chosen its home💝. you're not just my girlfriend, you're my
+                        comfort, you are my peace, you are the most beautiful habit of my heart😌
+                    </p>
+
+                    <p>
+                        Mujhe pata hai mai kai baar ache se nhi bol pata, I dont always say it perfectly, I know
+                        sometimes I might not express everything the way you deserve, the way I actually feel, but
+                        believe one thing that my love for you is real. Its deep. Its pure, its unending, its forever
+                        and ever. Its the kind of love that doesnt fade with time, it grows💗
+                    </p>
+
+                    <p>
+                        Apko nhi pata apka kya effect hai mere pe, Apki awaz akele hi mera mood sahi kr deti hai, apke
+                        random msgs, random love you, random affections just make my day sooooo much better. Apki
+                        presence even through the screen, makes me feel like everything is good. You dont even
+                        understand what you do to me. Its like mai normally act kr raha hota hu and you send me a cute
+                        "baby" msg and fir I am just smiling like an idiot like I've lost my mind, vaise wo to apko
+                        dekhte hi lost ho gya tha ji🤭
+                    </p>
+
+                    <p>
+                        Babyy you know what, being yours is my favourite feeling. I love you in a way that doesnt depend
+                        on distance. I love you in a way that is not temporary. I love you in a way that doesnt need a
+                        reason, I love in a way that I just want to eat you🤭😁
+                    </p>
+
+                    <p>
+                        And honestly, I dont want a valentine. I want you, not for a day, not for one month, not for one
+                        year. I want you for every season of my life. I want to be the man who protects you when you're
+                        weak, who makes you laugh when you're stressed, who holds you when you feel like crying, who
+                        listens to your cute si daant when I make you angry🤭, who reminds you every single day that you
+                        are loved beyond words❤️🫂
+                    </p>
+
+                    <p>
+                        I want to be the person jiske sath aap safe feel kro. The person jiske sath aap childish ho
+                        sako. The person jiske sath aap angry ho sako, the person jiske sath aap silent ho sako. Kyunki
+                        real love isnt just romance its comfort, and myy babyy is like my home🥹🫂
+                    </p>
+
+                    <p>
+                        You are the softest part of my heart. The prettiest reflection in my mind. the most special
+                        prayer on my lips, the most tastiest thought in my imagination🤭.
+                    </p>
+
+                    <p>
+                        I wish ki abhi mai apke sath hota to look into your eyes, hold your cheeks, and tell you how
+                        much I love you🥹. I wish ki mai apko zorrr se hug kr pata that all your stress, pain, and
+                        overthinking disappears. I wish ki I could kiss your forehead and say, 'I am here, my baby,
+                        always🥹🫂' But jab tak wo din nhi ata keep this msg close to you, kyunki every word here is
+                        real.
+                    </p>
+
+                    <p>
+                        I dont just love you when things are easy. I love you when things are hard. I love you even when
+                        we fight. I love you even when we dont talk for a while. I love you even when you are angry at
+                        me. I dont love your mood, I love youu🥺🫵. And no matter what happens. no matter what life
+                        brings, no matter how far the distance is I will always try for you. I will always improve for
+                        you. I will always stand for you. Kyunki aap mere life me temporary chapter nhi ho you are my
+                        whole story🥹🫂
+                    </p>
+
+                    <p>
+                        I want to make you feel loved in every way possible. I want to love you so deeply that you never
+                        doubt your worth. I want to make you feel like the most special girl in the world, because to me
+                        you really are one. You are the girl jiske liye my heart prayed for without knowing.
+                    </p>
+
+                    <p>
+                        I love your smile<br>
+                        I love your attitude🤭<br>
+                        I love your cuteness<br>
+                        I love the way you get mad<br>
+                        I love the way you care<br>
+                        I love you tasty sa nose😋<br>
+                        I love the way you exist
+                    </p>
+
+                    <p>
+                        And yes, I even love the way you steal my peace because you replace it with fun and
+                        happiness🤭😁. If love was a language you would be the only sentence I would ever want to speak.
+                    </p>
+
+                    <p>
+                        Happy Valentine's Day, mere pyaare babyyyyyyyy🥹❤️❤️💋💋💋🫂🫂🫂🫂<br>
+                        Thankyouu for being mine, Thankyouu for loving me, Thankyouuuu for existing.
+                    </p>
+
+                    <p>
+                        And babyy You are my favourite person, My tasty babyyyyy, My tastyy girl😋, My malkin and My
+                        future.
+                    </p>
+
+                    <p>
+                        I love you more than I can explain, more than I can show, more than I can ever write. I swear ek
+                        din I wil hold you close and all the distance will be gone. Until then, take my heart, keep it
+                        safe because it belongs to you🥹💝🫵
+                    </p>
+
+                    <p>
+                        Forever yours❤️,<br>
+                        Apkaa babyyyyyyyyyyyyy🫂
+                    </p>
+                </div>
+                <div class="big-love-text">
+                    I LOVEEEEEEEEEEEE YOUUUUUUUUUUUUUU SOOOOOOOOOOOOO MUCHHHHHHHHHHHH ANNUUUUUUUUUUUUUU 💖💖
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+
+    <!-- Confetti canvas for celebration -->
+    <canvas id="confettiCanvas"></canvas>
+
+    <!-- Click to start overlay (needed for audio autoplay) -->
+    <div class="start-overlay" id="startOverlay">
+        <div class="start-content">
+            <img src="us.png" alt="My Pyara Annu" class="start-image">
+            <p class="start-text">💕Click anywhere to start💕</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
